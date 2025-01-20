@@ -12,14 +12,14 @@ jobs:
     - name: cv
       uses: dante-ev/latex-action@latest
       with:
-        root_file: cv 
+        root_file: PELLOIN_Valentin_CV_en 
         working_directory: .
     - name: move
-      run: mkdir -p github_artifacts && mv cv.pdf ./github_artifacts/
+      run: mkdir -p github_artifacts && mv PELLOIN_Valentin_CV_en.pdf ./github_artifacts/
     - name: Upload pdf as artifact
       uses: actions/upload-artifact@v4
       with:
-        name: cv.pdf
+        name: PELLOIN_Valentin_CV_en.pdf
         path: ./github_artifacts
   deploy:
     needs: [build]
